@@ -83,9 +83,9 @@
 
 
 # чи належить x {1,2,3} U [-7,0)
-print("x=")
-x = float(input())
-if (x == 1 or x == 2 or x ==3) or (x >= -7 and x < 0):
-    print("х належить  {1,2,3} U [-7,0)")
-else:
-    print("х не належить  {1,2,3} U [-7,0)")
+# print("x=")
+# x = float(input())
+# if (x == 1 or x == 2 or x ==3) or (x >= -7 and x < 0):
+#     print("х належить  {1,2,3} U [-7,0)")
+# else:
+#     print("х не належить  {1,2,3} U [-7,0)")
