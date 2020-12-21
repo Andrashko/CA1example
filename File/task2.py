@@ -70,19 +70,29 @@ class Cathedra:
                 home_phone = int(home_phone)
                 self.__list.append(Employee(surname, name, second_name, post, home_phone, mobile_phone))
 
+    # повертає одного або None
     def find_by_surname(self, surname):
         for employee in self.__list:
             if employee.surname == surname:
                 return employee
         return None
 
+    #повертає список
+    def find_by_post(self, post):
+        return [employee for employee in self.__list if employee.post == post]
+
+
 SATO = Cathedra("sato.txt")
 # SATO.add(Employee("Андрашко", "Юрій", "Васильович", "доцент", "0311234567", "0509429407"))
 # SATO.add(Employee("Брила", "Андрій", "Юрійович", "доцент", "031234567", "050913556"))
+# SATO.add(Employee("Ломага","Марія","Михайлівна","старший викладач","-","0951234567"))
+# SATO.save_to_file()
 SATO.load_from_file()
 print(SATO)
 print(SATO.find_by_surname("Андрашко"))
 print(SATO.find_by_surname("Мич"))
+
+print(SATO.find_by_post("доцент"))
 # a = Employee("Андрашко", "Юрій", "Васильович", "доцент", "0311234567", "0509429407")
 #
 # print(a.age)
